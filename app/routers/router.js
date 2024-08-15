@@ -7,6 +7,8 @@ const employee = require('../controllers/controller_employee.js');
 const product = require('../controllers/controller_product.js');
 const sucursal = require('../controllers/controller_sucursal.js');
 const libro = require('../controllers/controller_libro.js');
+const prestamo = require('../controllers/controller_prestamo.js');
+//const prestamo = require('../controllers/controller_prestamo.js');
 
 router.post('/api/customers/create', customers.create);
 router.get('/api/customers/all', customers.retrieveAllCustomers);
@@ -41,5 +43,12 @@ router.post('/api/libro/create', libro.create);
 router.get('/api/libro/onebyid/:id', libro.getLibroById);
 router.put('/api/libro/update/:id', libro.UpdatebyId);
 router.delete('/api/libro/delete/:id', libro.deleteById);
+
+//Prestamo routes
+router.post('/api/prestamo/create', prestamo.create);
+router.get('/api/prestamo/onebyid/:id', prestamo.getPrestamoById);
+router.put('/api/prestamo/update/:id', prestamo.UpdatebyId);
+router.delete('/api/prestamo/delete/:id', prestamo.deleteById);
+
 
 module.exports = router;

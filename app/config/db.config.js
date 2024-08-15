@@ -32,5 +32,6 @@ db.Employee = require('../models/employee.model.js')(sequelize, Sequelize);
 db.Product = require('../models/product.model.js')(sequelize, Sequelize);
 db.Sucursal = require('../models/sucursal.model.js')(sequelize, Sequelize);
 db.Libro = require('../models/libro.model.js')(sequelize, Sequelize);
+db.Prestamo = require('../models/prestamo.model.js')(sequelize, Sequelize);
 
 module.exports = db;
